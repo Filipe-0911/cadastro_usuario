@@ -11,6 +11,7 @@ cnpj = Documento.cria_documento("61115052000106")
 telefone = TelefonesBr("5592984171672")
 email = Email("fbianchi.andrade@gmail.com")
 data = Datas()
+dia_da_semana = data.dia_semana()
 
 print(f"""
 CPF: {cpf}
@@ -18,7 +19,7 @@ CNPJ: {cnpj}
 Email: {email}
 Telefone:{telefone}
 Data cadastro: {data}
-Dia da semana: {data.dia_semana()}
+Dia da semana: {dia_da_semana}
 Cep: {cep}
 Cidade: {cidade}
 UF: {uf}
