@@ -1,7 +1,7 @@
 from classes.Cnpj import Cnpj
 from classes.Cpf import Cpf
 
-class Documento(Cpf, Cnpj):
+class Documento:
     
     @staticmethod
     def cria_documento(documento):

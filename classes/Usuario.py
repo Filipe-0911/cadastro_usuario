@@ -7,7 +7,7 @@ from classes.TelefonesBr import TelefonesBr
 class Usuario:
     def __init__(self, nome, documento, cep, email, telefone) -> None:
         self.nome = nome
-        self.documento = Documento(documento)
+        self.documento = Documento.cria_documento(documento)
         self.cep = BuscaEndereco(cep)
         self.email = Email(email)
         self.data = Datas()
