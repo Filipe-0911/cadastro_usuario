@@ -22,6 +22,9 @@ class Cpf:
     def __repr__(self) -> str:
         return self._format_cpf()
     
+    def __eq__(self, other) -> bool:
+        return self.cpf == other.cpf
+    
     def _format_cpf(self):    
         mask = CPF()
         return mask.mask(self.cpf)

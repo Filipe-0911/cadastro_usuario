@@ -15,8 +15,17 @@ class Usuario:
         self._telefone = TelefonesBr(telefone)
         self._data_nascimento = data_nascimento
         
+    @property
+    def documento(self):
+        return self._documento
+        
     def detalhar(self):
         return self.__dict__
+    
+    def sobrenome(self):
+        nome_completo = self._nome.strip()
+        nome_quebrado = nome_completo.split()
+        return nome_quebrado[-1] #[-1] retorna sempre o último elemento da lista
     
     def idade(self):
         data_atual = datetime.today()

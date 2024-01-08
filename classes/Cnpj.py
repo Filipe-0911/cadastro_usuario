@@ -26,3 +26,6 @@ class Cnpj:
         mask = CNPJ()
         return mask.mask(self.cnpj)
     
+    def __eq__(self, other) -> bool:
+        return self.cnpj == other.cnpj
+    
