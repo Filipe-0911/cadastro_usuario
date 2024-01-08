@@ -1,11 +1,11 @@
 import re
 
 class Email:
-    padrao_email = "\w{2,50}@\w{2,15}\.[a-z]{2,3}\.?([a-z]{2,3})?"
+    padrao_email = r"\w{2,50}@\w{2,15}\.[a-z]{2,3}\.?([a-z]{2,3})?"
     
     def __init__(self, email) -> None:
         if self._valida_email(email):
-            self.email = email
+            self._email = email
         else:
             raise ValueError("Número inválido")    
     
@@ -18,6 +18,9 @@ class Email:
         return False
     
     def __str__(self) -> str:
-        return self.email
+        return self._email
+    
+    def __repr__(self) -> str:
+        return self._email
         
         

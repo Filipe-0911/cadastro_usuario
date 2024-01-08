@@ -19,6 +19,9 @@ class Cpf:
     def __str__(self) -> str:
         return self._format_cpf()
     
+    def __repr__(self) -> str:
+        return self._format_cpf()
+    
     def _format_cpf(self):    
         mask = CPF()
         return mask.mask(self.cpf)

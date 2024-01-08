@@ -19,6 +19,9 @@ class Cnpj:
     def __str__(self) -> str:
         return self._format_cnpj()
     
+    def __repr__(self) -> str:
+        return self._format_cnpj()
+    
     def _format_cnpj(self):    
         mask = CNPJ()
         return mask.mask(self.cnpj)

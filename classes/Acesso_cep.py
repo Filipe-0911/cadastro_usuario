@@ -20,6 +20,9 @@ class BuscaEndereco:
     def __str__(self) -> str:
         return self._format()
     
+    def __repr__(self) -> str:
+        return self._format()
+    
     def get_endereco(self):
         url = f"https://viacep.com.br/ws/{self._cep}/json/"
         resposta = requests.get(url)

@@ -17,6 +17,9 @@ class Datas:
     def __str__(self) -> str:
         return self._format()
     
+    def __repr__(self) -> str:
+        return self._format()
+    
     def _format(self):
         return self.momento_cadastro.strftime("%d/%m/%Y %H:%M")
     
