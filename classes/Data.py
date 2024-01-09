@@ -6,12 +6,14 @@ class Datas:
         
     def mes_cadastro(self):
         meses_do_ano = ['Janeiro', 'Fevereiro', 'Março' , 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubto', 'Novembro', 'Dezembro']
-        
         mes_cadastro = self.momento_cadastro.month - 1
+        
         return meses_do_ano[mes_cadastro]
+    
     def dia_semana(self):
         dias_semana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo']
         dia_semana = self.momento_cadastro.weekday()
+        
         return dias_semana[dia_semana]
     
     def __str__(self) -> str:

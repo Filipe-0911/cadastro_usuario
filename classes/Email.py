@@ -7,10 +7,11 @@ class Email:
         if self._valida_email(email):
             self._email = email
         else:
-            raise ValueError("Número inválido")    
+            raise ValueError("Email inválido")    
     
-    def _valida_email(self, email) -> bool:
-        resposta = re.findall(self.padrao_email, email)
+    @staticmethod
+    def _valida_email(email) -> bool:
+        resposta = re.findall(Email.padrao_email, email)
 
         if resposta:
             return True
@@ -22,5 +23,7 @@ class Email:
     
     def __repr__(self) -> str:
         return self._email
+    def __eq__(self, __value: str) -> bool:
+        return self._email == __value
         
         

@@ -26,6 +26,9 @@ class TelefonesBr:
         
         return numero_formatado
     
+    def __eq__(self, other) -> bool:
+        return self.numero == other.numero
+    
     def __str__(self) -> str:
         return self._format()
     

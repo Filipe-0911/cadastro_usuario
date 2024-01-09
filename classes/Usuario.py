@@ -18,6 +18,14 @@ class Usuario:
     @property
     def documento(self):
         return self._documento
+    
+    @property
+    def telefone(self):
+        return self._telefone
+    
+    @property
+    def email(self):
+        return self._email
         
     def detalhar(self):
         return self.__dict__
