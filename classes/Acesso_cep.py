@@ -9,6 +9,10 @@ class BuscaEndereco:
         else:
             raise ValueError("CEP Inválido.")
         
+    @property
+    def cep(self):
+        return self._cep
+        
     def cep_valido(self, cep):
         if len(cep) == 8:
             return True

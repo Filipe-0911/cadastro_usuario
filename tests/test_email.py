@@ -11,7 +11,6 @@ class TestClass:
         esperado = 'fbianchi.andrade@gmail.com'
         
         usuario_teste = Usuario("Filipe de Bianchi Andrade", 44060631884, 71060639, entrada, 5592984171672, "09/11/1993")
-        
         resposta = usuario_teste.email
         
         assert esperado == resposta
