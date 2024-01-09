@@ -8,10 +8,10 @@ class TestClass:
     @mark.testes_cpf
     def test_quando_for_passado_um_cpf_o_documento_deve_chamar_a_classe_cpf(self):
         # Given-Contexto
-        entrada = '44060631884'
-        esperado = Cpf('44060631884')
+        entrada = '64252627028'
+        esperado = Cpf('64252627028')
         
-        usuario_teste = Usuario('Filipe de Bianchi Andrade', entrada, 71060639, "fbianchi.andrade@gmail.com", 5592984171672, "09/11/1993")
+        usuario_teste = Usuario('Fulano Beltrano Ciclano', entrada, 71060639, "fbeltrano.ciclano@gmail.com", 5592999887766, "09/11/1993")
         
         # When-ação
         resultado = usuario_teste.documento

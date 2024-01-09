@@ -11,7 +11,7 @@ class TestClass:
         entrada = '00394460005887'
         esperado = Cnpj('00394460005887')
         
-        cnpj_teste = Usuario('Filipe de Bianchi Andrade', entrada, 71060639, "fbianchi.andrade@gmail.com", 5592984171672, "09/11/1993")
+        cnpj_teste = Usuario('Fulano Beltrano Ciclano', entrada, 71060639, "fbeltrano.ciclano@gmail.com", 5592999887766, "09/11/1993")
         
         # When-ação
         resultado = cnpj_teste.documento

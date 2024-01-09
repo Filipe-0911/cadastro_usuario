@@ -9,7 +9,7 @@ class TestClass:
         entrada = '09/11/1993' 
         esperado = 30
         
-        usuario_teste = Usuario("Filipe de Bianchi Andrade", 44060631884, 71060639, "fbianchi.andrade@gmail.com", 5592984171672, entrada)
+        usuario_teste = Usuario('Fulano Beltrano Ciclano', 64252627028, 71060639, 'fbeltrano.ciclano@gmail.com', 5592999887766, entrada)
         
         #When-ação
         resultado = usuario_teste.idade()
@@ -20,10 +20,10 @@ class TestClass:
     @mark.testes_usuario
     def test_quando_o_nome_recebe_filipe_de_bianchi_andrade_deve_retornar_apenas_andrade(self):
         #Given-Contexto
-        entrada = 'Filipe de Bianchi Andrade'
-        esperado = 'Andrade'
+        entrada = 'Fulano Beltrano Ciclano'
+        esperado = 'Ciclano'
         
-        usuario_teste = Usuario(entrada, 44060631884, 71060639, "fbianchi.andrade@gmail.com", 5592984171672, "09/11/1993")
+        usuario_teste = Usuario(entrada, 64252627028, 71060639, 'fbeltrano.ciclano@gmail.com', 5592999887766, "09/11/1993")
         
         # When-ação
         resultado = usuario_teste.sobrenome()
@@ -37,7 +37,7 @@ class TestClass:
         entrada = True
         esperado = True
         
-        usuario_teste = Usuario("Filipe de Bianchi Andrade", 44060631884, 71060639, "fbianchi.andrade@gmail.com", 5592984171672, "09/11/1993", entrada)
+        usuario_teste = Usuario('Fulano Beltrano Ciclano', 64252627028, 71060639, 'fbeltrano.ciclano@gmail.com', 5592999887766, "09/11/1993", entrada)
         
         # When-ação
         resultado = usuario_teste._is_admin()
@@ -49,7 +49,7 @@ class TestClass:
     def test_testando_funcao_detalhar_que_retorna_um_dict_do_usuario_instanciado(self):
         # given
         data = Datas()
-        entrada = Usuario("Filipe de Bianchi Andrade", 44060631884, 71060639, "fbianchi.andrade@gmail.com", 5592984171672, "09/11/1993", True)
+        entrada = Usuario('Fulano Beltrano Ciclano', 64252627028, 71060639, 'fbeltrano.ciclano@gmail.com', 5592999887766, "09/11/1993", True)
         
         esperado = entrada.__dict__
         # When

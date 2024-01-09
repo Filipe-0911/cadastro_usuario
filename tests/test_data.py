@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 import datetime as dt
 from classes.Data import Datas
 from pytest import mark
