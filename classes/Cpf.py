@@ -3,15 +3,15 @@ from validate_docbr import CPF
 class Cpf:
     def __init__(self, documento):
         documento = str(documento)
-
-        if self._cpf_valido(documento):
-            self.cpf = documento
+        if len(documento) == 11:
+            if self._cpf_valido(documento):
+                self.cpf = documento
         else:
             raise ValueError("CPF inválido.")
         
     def _cpf_valido(self, documento):
-        if len(documento) == 11:
-            validador = CPF()
+        validador = CPF()
+        if validador.validate(documento):
             return validador.validate(documento)
         else:
             raise ValueError("Quantidade de digitos inválida.")

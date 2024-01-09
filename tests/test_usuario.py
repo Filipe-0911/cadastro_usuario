@@ -1,5 +1,6 @@
 from classes.Usuario import Usuario
 from pytest import mark
+from classes.Data import Datas
 
 class TestClass:
     @mark.testes_usuario
@@ -42,4 +43,17 @@ class TestClass:
         resultado = usuario_teste._is_admin()
         
         # Then-desfecho
-        assert resultado == esperado       
+        assert resultado == esperado
+        
+    @mark.testes_usuario
+    def test_testando_funcao_detalhar_que_retorna_um_dict_do_usuario_instanciado(self):
+        # given
+        data = Datas()
+        entrada = Usuario("Filipe de Bianchi Andrade", 44060631884, 71060639, "fbianchi.andrade@gmail.com", 5592984171672, "09/11/1993", True)
+        
+        esperado = entrada.__dict__
+        # When
+        resposta = entrada.detalhar()
+        
+        # then
+        assert resposta == esperado

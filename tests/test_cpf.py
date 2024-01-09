@@ -1,6 +1,7 @@
 from classes.Usuario import Usuario
 from classes.Cpf import Cpf
 from pytest import mark
+import pytest
 
 class TestClass:
     
@@ -17,3 +18,23 @@ class TestClass:
         
         # Then-desfecho
         assert resultado == esperado
+        
+    @mark.testes_cpf
+    def test_quando_for_passado_um_valor_invalido_para_cpf_ele_retorna_value_error(self):
+        entrada = '44444444444'
+
+        #p tratar Exceptions DEVEMOS usar with pytest.raises(erro, match)
+        with pytest.raises(ValueError, match="Quantidade de digitos inválida."): 
+            cnpj_teste = Cpf(entrada)
+            
+            assert cnpj_teste
+            
+    @mark.testes_cpf
+    def test_quando_for_passado_um_valor_menor_que_o_desejado_para_cpf_ele_retorna_value_error_init(self):
+        entrada = '444444444'
+        
+        #p tratar Exceptions DEVEMOS usar with pytest.raises(erro, match)
+        with pytest.raises(ValueError, match="CPF inválido."): 
+            cnpj_teste = Cpf(entrada)
+            
+            assert cnpj_teste

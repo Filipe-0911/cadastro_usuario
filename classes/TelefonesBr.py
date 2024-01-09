@@ -9,7 +9,7 @@ class TelefonesBr:
         if self._valida_telefone(telefone):
             self.numero = telefone
         else:
-            raise ValueError("Número inválido")    
+            raise ValueError("Número inválido")
     
     def _valida_telefone(self, telefone) -> bool:
         resposta = re.findall(self.padrao_telefone, telefone)

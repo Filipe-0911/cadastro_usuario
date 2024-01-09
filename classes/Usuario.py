@@ -6,13 +6,13 @@ from classes.TelefonesBr import TelefonesBr
 from datetime import datetime
 
 class Usuario:
-    def __init__(self, nome, documento, cep, email, telefone, data_nascimento=None, ehadmin=False) -> None:
+    def __init__(self, nome, documento, cep, email, telefone, data_nascimento=None, ehadmin=False, data=Datas()) -> None:
         self._nome = nome
         self._ehadmin = ehadmin
         self._documento = Documento.cria_documento(documento)
         self._cep = BuscaEndereco(cep)
         self._email = Email(email)
-        self._data = Datas()
+        self._data = data
         self._telefone = TelefonesBr(telefone)
         self._data_nascimento = data_nascimento
         
