@@ -1,7 +1,10 @@
 from classes.Usuario import Usuario
 from classes.Cpf import Cpf
+from pytest import mark
 
 class TestClass:
+    
+    @mark.testes_cpf
     def test_quando_for_passado_um_cpf_o_documento_deve_chamar_a_classe_cpf(self):
         # Given-Contexto
         entrada = '44060631884'

@@ -6,8 +6,9 @@ from classes.TelefonesBr import TelefonesBr
 from datetime import datetime
 
 class Usuario:
-    def __init__(self, nome, documento, cep, email, telefone, data_nascimento=None) -> None:
+    def __init__(self, nome, documento, cep, email, telefone, data_nascimento=None, ehadmin=False) -> None:
         self._nome = nome
+        self._ehadmin = ehadmin
         self._documento = Documento.cria_documento(documento)
         self._cep = BuscaEndereco(cep)
         self._email = Email(email)
@@ -39,6 +40,9 @@ class Usuario:
         data_atual = datetime.today()
         data_nascimento = datetime.strptime(self._data_nascimento, '%d/%m/%Y')
         return ((data_atual - data_nascimento).days) // 365
+    
+    def _is_admin(self):
+        return self._ehadmin
     
     def __str__(self) -> str:
         return self._format()

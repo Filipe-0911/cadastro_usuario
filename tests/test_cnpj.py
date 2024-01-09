@@ -1,7 +1,10 @@
 from classes.Usuario import Usuario
 from classes.Cnpj import Cnpj
+from pytest import mark
 
 class TestClass:
+    
+    @mark.testes_cnpj
     def test_quando_for_passado_um_cnpj_o_documento_deve_chamar_a_classe_cnpj(self):
         # Given-Contexto
         entrada = '00394460005887'
