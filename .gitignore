@@ -4,3 +4,9 @@ database/
 teste.py
 /venv
 /coverage_rel_html_test
+
+# Arquivos específicos do ambiente local
+*.ini
+.coveragerc
+.coverage
+report.xml
