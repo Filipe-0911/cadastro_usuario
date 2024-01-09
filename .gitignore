@@ -3,4 +3,4 @@
 database/
 teste.py
 /venv
-/htmlcov
+/coverage_rel_htm_test
